@@ -7,18 +7,25 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data () {
+    return {
+
+    }
+  },
+  created () {
+    console.log(this)
+  }
 }
 </script>
 
 <style lang="stylus">
-@import '~@/assets/css/index';
-#app {
+@import '~@/assets/stylus/index';
+#app
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
 </style>
