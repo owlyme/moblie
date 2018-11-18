@@ -4,7 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import utils from './utils'
+import Vant from 'vant'
+import 'vant/lib/vant-css/index.css'
 
+Vue.use(Vant)
 Vue.use(utils)
 
 Vue.config.productionTip = false

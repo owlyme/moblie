@@ -78,5 +78,13 @@ export default {
       }
       return false
     }
+    // 客户端缓存数据
+    Vue.prototype.PAGEDATE = function (key, value) {
+      if (value === undefined) {
+        return JSON.parse(sessionStorage.getItem(key))
+      } else {
+        sessionStorage.setItem(key, value)
+      }
+    }
   }
 }

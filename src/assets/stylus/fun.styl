@@ -85,6 +85,8 @@ gradientBlue()
 gradient(n)
   background-image:-webkit-linear-gradient(n)
   background-image:linear-gradient(n)
+gradientLine(n, n1)
+  background: linear-gradient(to right, n, n1)
 gradientIE(type, startColor, endColor)
   if support-for-ie
     filter unquote('progid:DXImageTransform.Microsoft.gradient(startcolorstr=' + startColor + ',endcolorstr=' + endColor + ',gradientType = ' + type +')')
@@ -134,6 +136,8 @@ mt(n)
   margin-top:n
 mb(n)
   margin-bottom:n
+mtb(n)
+  margin: n 0
 padr(n)
   padding-right:n
 padl(n)
@@ -142,6 +146,8 @@ padt(n)
   padding-top:n
 padb(n)
   padding-bottom:n
+palr(n)
+  padding: 0 n
 inline()
   display:inline-block
 fl()
@@ -189,3 +195,6 @@ borb(n = 1px solid #ddd)
   border-bottom:n
 textcenter()
   text-align: center
+linecenter(n)
+  height n
+  line-height n 
