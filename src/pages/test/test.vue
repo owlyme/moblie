@@ -1,37 +1,20 @@
 /* eslint-disable */
 <template>
-<div @click="click(item)">
-  <div v-for="item in 150" :key="item">
-      <span class="click(item)"  :data-item="item">
-          {{item}}
-      </span>
-  </div>
+<div>
+  <rili></rili>
 </div>
 </template>
 
 <script>
-let timer = Date.now()
-console.log(0, timer)
+import rili from '@/components/rili.vue'
 export default {
   name: 'commit',
-
+  components: {
+    rili
+  },
   data () {
     return {
 
-    }
-  },
-  beforeCreate () {
-    console.log(1, Date.now() - timer)
-  },
-  created () {
-    console.log(2, Date.now() - timer)
-  },
-  mounted () {
-    console.log(3, Date.now() - timer)
-  },
-  methods: {
-    click (item) {
-      console.log(item)
     }
   }
 }

@@ -5,7 +5,7 @@
     </div>
     <h2 class="title">我的频道 <span class="small-title fn12">选中不放可有拖拽排序</span> </h2>
 
-    <SlickList class="recommend-category" 
+    <SlickList class="recommend-category"
     axis="xy"
     v-model="recommendList"
     :pressDelay='300'
@@ -14,7 +14,7 @@
       <SlickItem class="slick-item" v-for="(item, index) in recommendList" :index="index" :key="index">
         <Badge class="inner"
         type="close"
-        @close="removeCategory(index)">          
+        @close="removeCategory(index)">
           <div slot="title"> {{item.label}} </div>
           </Badge>
       </SlickItem>
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { SlickList, SlickItem } from 'vue-slicksort';
+import { SlickList, SlickItem } from 'vue-slicksort'
 export default {
   name: 'category',
   props: ['info'],
@@ -42,18 +42,18 @@ export default {
     return {
       keyword: '',
       recommendList: [
-          {id:1, label: '科技1'},
-          {id:1, label: '科技2'},
-          {id:1, label: '科技3'},
-          {id:1, label: '科技4'},
-          {id:1, label: '科技5'},
+        {id: 1, label: '科技1'},
+        {id: 1, label: '科技2'},
+        {id: 1, label: '科技3'},
+        {id: 1, label: '科技4'},
+        {id: 1, label: '科技5'}
       ],
       moreCategoryList: [
-          {id:1, label: '科技'},
-          {id:1, label: '科技'},
-          {id:1, label: '科技'},
-          {id:1, label: '科技'},
-          {id:1, label: '科技'},
+        {id: 1, label: '科技'},
+        {id: 1, label: '科技'},
+        {id: 1, label: '科技'},
+        {id: 1, label: '科技'},
+        {id: 1, label: '科技'}
       ]
     }
   },
@@ -64,17 +64,17 @@ export default {
       let category = this.moreCategoryList[index]
       this.recommendList.push(category)
       // 异步加载
-      this.$BUS.$emit('addCategory', )
+      this.$BUS.$emit('addCategory')
     },
-    removeCategory(index){
+    removeCategory (index) {
       this.recommendList.splice(index, 1)
     },
     close () {
       this.$BUS.$emit('categoryClose', this.keyword)
     },
-    newlist(newlist){
+    newlist (newlist) {
       console.log(newlist)
-    } 
+    }
   }
 }
 </script>

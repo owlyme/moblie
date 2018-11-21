@@ -15,7 +15,7 @@
         <div v-for="(item, index) in history" :key="index">{{item}}</div>
     </div>
     <div v-else>
-                       
+
     </div>
   </div>
 </template>

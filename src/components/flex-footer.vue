@@ -27,7 +27,7 @@ export default {
   methods: {
     tabbarChange (index) {
       console.log('footer', index)
-      this.$emit('toPage',index)
+      this.$emit('toPage', index)
       let pageName = ''
       if (index === 0) {
         pageName = 'main'

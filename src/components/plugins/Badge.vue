@@ -15,25 +15,24 @@
 <script>
 export default {
   name: 'ttbage',
-  props: ['info'],
   props: {
-      info: {
-          type: String,
-          default: ''
-      },
-      type: {
-          type: String,
-          default: "close"
-      }
+    info: {
+      type: String,
+      default: ''
+    },
+    type: {
+      type: String,
+      default: 'close'
+    }
   },
   data () {
     return {
     }
   },
   methods: {
-      close() {
-          this.$emit("close")
-      }
+    close () {
+      this.$emit('close')
+    }
   }
 }
 </script>

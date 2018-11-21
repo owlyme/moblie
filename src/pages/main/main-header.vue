@@ -103,14 +103,14 @@ export default {
     search () {
       this.$BUS.$emit('openSearchPage')
     },
-    addCategory() {
+    addCategory () {
       this.$BUS.$emit('openCategory')
     },
-    tabclick(index) {
+    tabclick (index) {
       console.log(index)
       if (index === 0) {
         this.search()
-      } else if (index === this.navList.length + 1){
+      } else if (index === this.navList.length + 1) {
         this.addCategory()
       }
     }
@@ -122,7 +122,7 @@ export default {
 @import '~@/assets/stylus/index';
 item-width = 60px
 .main-header
-    .color 
+    .color
       color color255
     .van-tabs__nav
       gradientLine(#ff0, #f00) !important

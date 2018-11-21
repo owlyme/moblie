@@ -23,15 +23,15 @@ export default {
   props: ['info'],
   data () {
     return {
-        initinfo: this.info
+      initinfo: this.info
     }
   },
   created () {
 
   },
   methods: {
-      share(param) {
-      }
+    share (param) {
+    }
   }
 }
 </script>
