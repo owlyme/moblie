@@ -1,7 +1,7 @@
 <template>
     <div id="rili">
         <div class="label">
-            <span @click="preMonth"><i class="iconfont">&#xe614;</i></span>  
+            <span @click="preMonth"><i class="iconfont">&#xe614;</i></span>
             <span>{{yearMonth}}</span>
             <span @click="nextMonth"><i class="iconfont">&#xed61;</i></span>
         </div>
@@ -10,13 +10,13 @@
                 {{item}}
             </li>
             <li class="day" v-for="(item, index) in oneMonthList" :key="index" @click="select(item)">
-                <span 
+                <span
                     :class="{
                             'not-curr-month': item.type !== 1,
                             sigined: item.sigin,
                             sigin: item.sigin && item.date == currDay.getDate()
                             }"
-                    >{{item.date}}</span> 
+                    >{{item.date}}</span>
             </li>
         </ul>
         <div class="info">
@@ -36,7 +36,7 @@ export default {
       currDay: new Date(),
       oneDayMs: 1 * 24 * 60 * 60 * 1000,
       // 一天的毫秒数值
-      week: ['日','一','二','三','四','五','六'],
+      week: ['日', '一', '二', '三', '四', '五', '六'],
       oneMonthList: [],
       monthIndex: 0
     }
@@ -45,9 +45,9 @@ export default {
     this.currMonth()
   },
   computed: {
-      yearMonth() {
-          return `${this.currDay.getFullYear()}年${this.currDay.getMonth() + 1}月` 
-      }
+    yearMonth () {
+      return `${this.currDay.getFullYear()}年${this.currDay.getMonth() + 1}月`
+    }
   },
   methods: {
     currMonth (dateString) {
@@ -132,7 +132,7 @@ export default {
       let month = today.getMonth()
       let year = today.getFullYear()
       let dateStr = this.currDay.toJSON().split('-')
-        //  注意today.getMonth 的值 小于 dateStr的month 1个
+      //  注意today.getMonth 的值 小于 dateStr的month 1个
       let nextMonth = month + 2
       if (nextMonth <= 12) {
         dateStr[1] = nextMonth > 9 ? `${nextMonth}` : `0${nextMonth}`
@@ -143,10 +143,10 @@ export default {
       this.currDay = new Date(dateStr.join('-'))
       this.currMonth()
     },
-    select(param) {
-        if (param.type === 1) {
-            this.$set(param, 'sigin', true)
-        }
+    select (param) {
+      if (param.type === 1) {
+        this.$set(param, 'sigin', true)
+      }
     }
   }
 }
@@ -198,9 +198,9 @@ info-size = 30px
         radius(info-size)
         padding-right 30px
         .img
-            width info-size            
+            width info-size
             radius(50%)
-            img 
+            img
                 max-width info-size
                 max-height info-size
 </style>

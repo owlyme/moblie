@@ -1,16 +1,23 @@
 /* eslint-disable */
 <template>
 <div>
-  <rili></rili>
+  <test></test>
 </div>
 </template>
 
 <script>
-import rili from '@/components/rili.vue'
+// import test from '@/components/rili.vue'
+// import test from '@/pages/self/info.vue'
+// import test from '@/pages/self/faTie.vue'
+// import test from './selectgroup.vue'
+import test from '@/pages/self/fans.vue'
+// import test from '@/pages/self/jifen.vue'
+
+
 export default {
   name: 'commit',
   components: {
-    rili
+    test
   },
   data () {
     return {
@@ -23,14 +30,5 @@ export default {
 <style lang="stylus">
 @import '~@/assets/stylus/index';
 avatar-size = 60px
-#newInformation
-  .like-or-not
-    center()
-    span
-      width 100px
-      margin 0 10px
-  .good
-    color color4 !important
-  .bad
-    color color3 !important
+
 </style>
